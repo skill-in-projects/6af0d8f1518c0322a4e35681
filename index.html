@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your App</title>
+    <!-- Platform lines, keep them: config.js (CONFIG.API_URL, your backend) and the Skill-in solo script. -->
+    <script src="config.js"></script>
+    <script type="module" src="/src/skillinSolo.js"></script>
+    <style>
+        body { margin: 0; }
+        #skillin-loading { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        #skillin-loading span { width: 28px; height: 28px; border: 3px solid #e5e7eb; border-top-color: #9ca3af; border-radius: 50%; animation: skillin-spin .8s linear infinite; }
+        @keyframes skillin-spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <!-- This file is only the shell. Build every page in React under src/ (start in src/App.jsx).
+         The loader below shows until React starts, then React replaces it. -->
+    <div id="root"><div id="skillin-loading" aria-label="Loading"><span></span></div></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
